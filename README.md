@@ -114,39 +114,6 @@ jupyter notebook notebooks/credit_risk_model.ipynb
 - Model coefficients analysis
 - Summary document (in `docs/summary_draft.md`)
 
-## Generating PDF Summary
-
-To generate the executive summary PDF (`docs/credit_risk_summary.pdf`):
-
-### Option 1: Using Pandoc (Recommended)
-```bash
-# Install pandoc and LaTeX (if needed)
-# macOS: brew install pandoc basictex
-# Linux: apt-get install pandoc texlive-latex-base
-
-# Convert to PDF
-cd docs
-pandoc credit_risk_summary.md -o credit_risk_summary.pdf \
-    --pdf-engine=xelatex \
-    -V geometry:margin=1in \
-    -V fontsize=11pt
-```
-
-### Option 2: Using the Script
-```bash
-./docs/convert_to_pdf.sh
-```
-
-### Option 3: Online Converters
-1. Open `docs/credit_risk_summary.md` in a markdown editor
-2. Export/Print to PDF
-3. Or use online tools: markdowntopdf.com, dillinger.io
-
-### Option 4: VS Code / Cursor
-1. Install "Markdown PDF" extension
-2. Open `docs/credit_risk_summary.md`
-3. Right-click → "Markdown PDF: Export (pdf)"
-
 ## Notes
 
 - The notebook is designed to be run end-to-end
