@@ -16,16 +16,34 @@ DigitalBank/
 │   ├── modeling.py                # Model training
 │   ├── evaluation.py              # Model evaluation & metrics
 │   ├── explainability.py          # SHAP & coefficient analysis
+│   ├── model_persistence.py       # Save/load models
 │   └── utils.py                   # Utility functions
 ├── models/                        # Saved model artifacts
 ├── plots/                         # Generated plots
-├── docs/
-│   └── summary_draft.md           # 2-page summary
+├── docs/                          # Documentation
+├── Dockerfile                     # Docker configuration
+├── docker-compose.yml             # Docker Compose setup
+├── .dockerignore                  # Docker ignore rules
 ├── requirements.txt               # Python dependencies
 └── README.md                      # This file
 ```
 
 ## Setup
+
+### Option 1: Docker (Recommended for Easy Setup)
+
+**Quick Start:**
+```bash
+# Start container with Jupyter Lab
+docker-compose up -d
+
+# Access Jupyter Lab at http://localhost:8888
+# Get token: docker-compose logs | grep token
+```
+
+See [DOCKER_GUIDE.md](DOCKER_GUIDE.md) for detailed Docker instructions.
+
+### Option 2: Local Installation
 
 1. **Install Dependencies**:
    ```bash

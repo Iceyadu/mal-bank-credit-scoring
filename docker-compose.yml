@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  credit-risk-modeling:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mal-bank-credit-risk
+    ports:
+      - "8888:8888"  # Jupyter Lab
+    volumes:
+      # Mount data directory (read-only)
+      - ./malbank_case_data:/app/data:ro
+      # Mount notebooks for live editing
+      - ./notebooks:/app/notebooks
+      # Mount src for code changes
+      - ./src:/app/src
+      # Persist models
+      - ./models:/app/models
+      # Persist plots
+      - ./plots:/app/plots
+      # Persist docs
+      - ./docs:/app/docs
+    environment:
+      - PYTHONPATH=/app/src
+      - JUPYTER_ENABLE_LAB=yes
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+

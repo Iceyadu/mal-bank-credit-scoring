@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Models (will be generated)
+models/*.pkl
+models/*.metadata.pkl
+
+# Plots (will be generated)
+plots/*.png
+plots/*.jpg
+
+# Data (should be mounted as volume, but keep directory structure)
+# data/*.csv
+# Note: Data is mounted as volume, so we don't copy it into image
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation builds
+docs/*.pdf
+docs/*.html
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
